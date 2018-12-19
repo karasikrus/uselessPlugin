@@ -1,0 +1,75 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Useless One</name>
+  <version>1.0</version>
+  <vendor email="com@yexample.com" url="http://www.mycompany.com">MyCompany</vendor>
+
+  <description><![CDATA[
+      Useless plugin made without greater goal or purpose
+    ]]></description>
+
+  <change-notes><![CDATA[
+      nothing nothing nothing nothing nothing nothing
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+      <!-- Add your actions here -->
+      <action
+      id="UselessOne.SOAskQuestion.ToolsMenu"
+      class="SOAskAction"
+      text="Ask a Question on StackOverflow"
+      description="Open Ask a Question page in browser">
+          <add-to-group group-id="ToolsMenu" anchor="last"/>
+      </action>
+
+      <action
+              id="UselessOne.SOSearch.Editor"
+              class="SOSearchAction"
+              text="Search on StackOverflow"
+              description="Search highlighted text">
+          <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      </action>
+      <action
+              id="UselessOne.SOSearch.Console"
+              class="SOSearchAction"
+              text="Search on StackOverflow"
+              description="Search highlighted text">
+          <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+      </action>
+
+
+      <action id="GoogleTranslate.Editor" class="GoogleTranslateAction" text="Google Translate"
+              description="Translate selected text in Google Translate">
+          <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt T"/>
+      </action>
+      <action id="GoogleTranslate.Console" class="GoogleTranslateAction" text="Google Translate"
+              description="Translate selected text in Google Translate">
+          <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt T"/>
+      </action>
+      <action id="YandexSearch.Editor" class="YandexSearchAction" text="Yandex Search"
+              description="Search highlighted text in Yandex">
+          <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      </action>
+      <action id="YandexSearch.Console" class="YandexSearchAction" text="Yandex Search"
+              description="Search highlighted text in Yandex">
+          <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+      </action>
+  </actions>
+
+</idea-plugin>
